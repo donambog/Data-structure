@@ -64,19 +64,3 @@ Multiply the value by the multiplier: Update the array at the corresponding inde
 Push the modified value back into the heap: Include its index so that it can be considered for future operations.
 After completing all k operations, we return the modified array.
 Let N be the length of nums.
-
-Time Complexity: O(N+k⋅logN)
-
-The approach uses a heap (priority queue) to efficiently find and update the smallest element in the nums list. Initially, building the heap takes O(N) time.
-
-Each of the k iterations involves removing the smallest element from the heap and then reinserting the updated element. Both the removal and insertion operations take O(logN) time.
-
-Therefore, the total time complexity for k iterations is O(k⋅logN), resulting in a total time complexity of O(N+k⋅logN).
-
-Note: The time complexity of the Java solution is O(N⋅logN+k⋅logN) because we aren't using an inbuilt heapify method in Java.
-
-Space Complexity: O(N)
-
-The approach uses a heap to store the elements of the nums list along with their indices. The heap requires additional space proportional to the number of elements in the nums list.
-
-Therefore, the space complexity is O(N).
